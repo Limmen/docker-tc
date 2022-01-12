@@ -24,6 +24,6 @@ qdisc_netm() {
 qdisc_tbf() {
     IF="$1"
     shift
-    tc qdisc add dev "$IF" $QDISC_HANDLE tbf burst 5kb latency 50ms $@
+    tc qdisc add dev "$IF" $QDISC_HANDLE tbf burst 5000mb latency 50ms $@
     qdisc_next
 }
